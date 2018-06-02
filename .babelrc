@@ -1,10 +1,12 @@
 {
     "presets": [
-        "react",
-        [ "env",{"modules": false, "comments": false } ]
+        "@babel/preset-react",
+        [ "@babel/preset-env",{"modules": false, "comments": false } ]
     ],
     "plugins": [
-        "syntax-dynamic-import"
+        "@babel/plugin-syntax-dynamic-import",
+        "@babel/plugin-proposal-class-properties",
+        [ "import", { "libraryName": "lodash" } ]
     ],
     "env": {
         "development": {

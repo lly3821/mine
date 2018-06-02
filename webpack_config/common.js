@@ -30,10 +30,11 @@ module.exports = {
                 test:/\.(js|jsx)$/,
                 use:['babel-loader'],
                 exclude:/node_modules/,
+                include:/src/,
             },
             {
                 test:/\.css$/,
-                use:['css-loader'],
+                use:['style-loader','css-loader'],
             },
             {
                 test:/\.(png|svg|jpg|gif)$/,
