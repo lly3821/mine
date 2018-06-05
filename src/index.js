@@ -1,8 +1,10 @@
 import React from 'react'
 import {render} from 'react-dom'
-import App from './app'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import AppRoutes from './appRoutes'
 
-render(
-    <App />,
+render(<Router>
+        <AppRoutes />
+    </Router>,
     document.getElementById('root')
 )

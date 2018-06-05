@@ -1,0 +1,13 @@
+
+path {
+    animation: path 5s linear infinite;
+}
+
+@keyframes path {
+    0%{
+          stroke-dasharray: 0, 1000px;
+      }
+      100%{
+          stroke-dasharray: 1000px, 1000px;
+      }
+}

@@ -1,5 +1,18 @@
-body,div,ul{padding: 0;margin: 0;width: 100%;height: 100%;}
-.header ul li{float: left;list-style-type: none;margin: 20px}
-.header ul li ul{display: none;position: absolute;top:21px;left:64px}
+body,div,ul{padding: 0;margin: 0}
+.header{height: 64px;width: 100%;background: #336699}
+.header-contents{width:780px;height: 64px;position: relative;top:0px;left: 20%}
+.header-logo{width: 280px;height:64px;float: left;background: url(assets/img/logo.jpg);background-repeat: no-repeat;background-size: 180px 50px;background-position-x: center;background-position-y: center}
+.header-nav,.header-nav ul{height: 64px;float: left;}
+.header-nav ul a { display:block;height:64;width:100px;line-height:64px;color:#ffffff;text-decoration:none;text-align:center;}
+.header-nav li {float: left;list-style-type: none;position: relative;}
+.header-nav ul ul a {display:block;height:32px;width:100px;line-height:32px;background:#eeeeee;color: #444444;text-decoration:none;text-align:center;overflow:hidden;}
+.header-nav ul ul a:hover{color:#16bfdd;background: #f7f7f7}
+.header-nav ul ul{visibility: hidden;position: absolute;left: 0px;top:64px}
+.header-nav ul li:hover ul,.header-nav ul a:hover ul{visibility:visible;}
+
+.top-img{width: 100%;height: 350px;}
+.btn {width:8px;height: 8px;border-radius: 4px;background: #a0a0a0;float: left;margin: 6px;position: relative;top:-30px;left:42%}
+.btn:hover{background: #e2b68d}
+
 
 

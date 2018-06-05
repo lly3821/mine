@@ -1,14 +1,15 @@
 import React from "react";
 import $ from "jquery";
 import './style.css'
+import Picture from './picture'
 
 export default class MenuPage extends React.Component {
 
-    onMenuClicked  = (ev) =>{
+/*     onMenuClicked  = (ev) =>{
         let node = $(ev.target);
         let subMenu = node.next();
-        subMenu.css("display", subMenu.css('display') === "none" ? "block" : "none");    
-    }
+        subMenu.css("visibility", subMenu.css('visibility') === "hidden" ? "visible" : "hidden");    
+    } */
     generateMenu(menuObj) {
         let vdom = [];
         if (menuObj instanceof Array) {
@@ -24,7 +25,7 @@ export default class MenuPage extends React.Component {
         } else {
             vdom.push(
                 <li key={menuObj.name}>
-                    <a onClick={this.onMenuClicked}>
+                    <a /* onClick={this.onMenuClicked} */>
                         {menuObj.name}
                     </a>
                     {this.generateMenu(menuObj.children)}
@@ -99,10 +100,18 @@ export default class MenuPage extends React.Component {
             ]
         let Contents = this.generateMenu(data)
         return (
-            <div className="header">
-                {Contents}
+            <div>
+                <div className="header">
+                    <div className="header-contents">
+                        <div className="header-logo"></div>
+                        <div className="header-nav">
+                            {Contents}
+                        </div>
+                    </div>
+                </div>
+                <Picture />
             </div>
-            
+
         );
     }
 }
