@@ -8,6 +8,7 @@ export default class Picture extends Component{
     componentDidMount =()=>{
         this.setNowIndex()
     }
+    //隔3秒播放下一张图片
     setNowIndex = () => {
         const self = this
         this.timer = setInterval(function(){
@@ -23,16 +24,17 @@ export default class Picture extends Component{
                 return false
             }
         },3000)
-    }
-        
+    }  
+    //鼠标hover，图片悬停    
     handleHover = () => {      
         this.setState({active:!this.state.active})
     }
-
+    //点击图片圆点页，跳转对应图片
     handleClick = (e) => {
         let nowActive = Number(e.target.attributes.id.value)
         this.setState({nowIndex:nowActive})
     }
+    //生成对应图片的圆点页
     getBtn = () =>{
         var cycle = []
         for (let i=1;i<=4;i++){
@@ -45,7 +47,6 @@ export default class Picture extends Component{
         }
         return(cycle)       
     }
-
     render(){
         let picsrc=`http://s.amazeui.org/media/i/demos/bing-`+`${this.state.nowIndex}`+`.jpg`
         return(

@@ -1,13 +1,28 @@
 
+svg{
+    position: relative;
+    top:50px;
+    left: 50px;
+}
 path {
-    animation: path 5s linear infinite;
+    animation: path 3s infinite     
+}
+@keyframes path{
+    from{
+        stroke-dasharray: 0,1000px
+    }
+    to{
+        stroke-dasharray: 1000px,1000px
+    }
+}
+@keyframes open{
+    to{
+        transform:translate(20px,0)
+    }
+}
+@keyframes close {
+    to{
+        transform:translate(20px,0)
+    }
 }
 
-@keyframes path {
-    0%{
-          stroke-dasharray: 0, 1000px;
-      }
-      100%{
-          stroke-dasharray: 1000px, 1000px;
-      }
-}
